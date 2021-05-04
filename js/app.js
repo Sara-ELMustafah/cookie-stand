@@ -4,6 +4,10 @@ const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm',
 
 const tableEl = document.getElementById('sales');
 
+
+//The constructor should start with a capital letter
+//let locations = []; //array of objects
+//each time we create an object it will be automatically pushed to this array
 function SalmonCookies(location, minHourlyCustomers, maxHourlyCustomers, averageCookiesPerCustomer) {
   this.location = location;
   this.minHourlyCustomers = minHourlyCustomers;
@@ -14,6 +18,10 @@ function SalmonCookies(location, minHourlyCustomers, maxHourlyCustomers, average
   this.cookiesPerHour = [];
   
   this.sumHourlyTotals = 0;
+
+  //locations.push(this);
+  //If I have something common
+  //this.school='asac';
 }
 
 SalmonCookies.prototype.customersPerHourFun = function() {
@@ -57,13 +65,15 @@ SalmonCookies.prototype.displayFun = function() {
   tableEl.appendChild(tRow);
 };
 
-var locations=[];
+let locations=[];
 locations[0]=new SalmonCookies('Seattle', 23, 65, 6.3);
 locations[1]=new SalmonCookies('Tokyo', 3, 24, 1.2);
 locations[2]=new SalmonCookies('Dubai', 11, 38, 3.7);
 locations[3]=new SalmonCookies('Paris', 20, 38, 2.3);
 locations[4]=new SalmonCookies('Lima', 2, 16, 4.6);
 
+//We can do this instead of an array
+//let seattel=new SalmonCookies('Seattle', 23, 65, 6.3);
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
