@@ -19,7 +19,7 @@ function SalmonCookies(location, minHourlyCustomers, maxHourlyCustomers, average
   
   this.sumHourlyTotals = 0;
 
-  //locations.push(this);
+  //locations.push(this); //this ---> The object itself
   //If I have something common
   //this.school='asac';
 }
@@ -49,6 +49,10 @@ SalmonCookies.prototype.cookiesPerHourFun = function() {
 
 
 SalmonCookies.prototype.displayFun = function() {
+  //let container=document.gitElementById('container');
+  //let table=document.createElement('table');
+  //container.appendChild(table);
+  
   this.cookiesPerHourFun();
   const tRow = document.createElement('tr');
   let tData = document.createElement('td');
