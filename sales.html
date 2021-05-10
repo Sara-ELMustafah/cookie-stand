@@ -1,19 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales</title>
+    <style>
+        td{
+            border: 1px black solid;
+
+        }
+        body{
+            background-color: #d0bdf4;
+        }
+        legend {
+    color: white;
+    font-family: oswald;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 4px;
+  }
+  fieldset {
+    border: solid 5px white;
+    margin: auto;
+    width: 75%;
+    padding: 17px;
+    align-content: center;
+    border-radius: 7px;
+    word-spacing: 2px;
+  }
+  label {
+    display: block;
+    font-size: 1.1em;
+    font-family: oswald;
+    color: white;
+  }
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+  label, input {
+    margin: 5px;
+  }
+  form {
+    margin-top: 25px;
+    padding-bottom: 15px;
+    width:80vw;
+    float: left;
+  }
+    </style>
 </head>
+
 <body>
-    <!-- <div id='container'></div> -->
-    <table id="sales"></table>
+    <header>
+        <h2>Pat Salmon Cookies</h2>
+        <ul>
+          <li><a href="index.html" title="Home Page">Home</a></li>
+          <li><a href="sales.html" title="Sales Data">Sales</a></li>
+          <li><a href="location.html" title="Find Location">Location</a></li>
+          <li><a href="about.html" title="About">About</a></li>
+        </ul>
+    </header>
 
+<main>
+    <form action="" id="locationForm">
+
+    <fieldset>
+
+        
+        <legend>Adding a new location </legend>
+
+        <label for="locName">Location Name</label>
+        <input type="text" id="locName" name="locName" placeholder="location name">
+
+        <label for="minCustperHr">Minimum Customers/Hour</label>
+        <input type="number" id="minCustperHr" name="minCustperHr" placeholder="integer number"> 
+
+        <label for="maxCustPerHr">Maximum Customers/Hour</label>
+        <input type="number" id="maxCustPerHr" name="maxCustPerHr" placeholder="integer number"> 
+
+        <label for="avgCookies">Sales cookies/Hour</label>
+        <input type="text" id="avgCookies" name="avgCookies" placeholder="avg number"> 
+
+        <input type="submit" value="add a location">
+        <!-- <button type="submit">add a location</button> -->
+
+    </fieldset>
+
+    </form>
+
+     <div id="cookies" ></div>
+    </main>
+    <footer>
+        
+    </footer>
     <script src="js/app.js"></script>
+
 </body>
+
 </html>
-
-
-
-
